@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<header id="header-main-top">
+    <div class="container_div_nav">
+        <a class="nav_link" href="home.html">Home</a>
+        <a class="nav_link" href="about.html">About me</a>
+        <a class="nav_link" href="projects.html">projects</a>
+        <a class="nav_link" href="resume.html">Resume</a>
+    </div>
+
+    <div id="icon-nav"><img id="icon-nav-menu" src="../img/icons8-menu.svg" alt="svg"><img id="icon-nav-x" class="active" src="../img/x-square-fill.svg" alt="svg"></div>
+</header>
+<body>
+    <main id="main-p-container"></main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "html",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0xb2c55
+})
+</script>
+<script type="module" src="../js/index.js"></script>
+</html>

@@ -1,0 +1,116 @@
+#body-resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#resume-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+    background-color: whitesmoke;
+    animation: transitionIn 1s ease-in-out;
+}
+
+#header-resume {
+    text-align: center;
+    background-color: #002D62;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#main-resume {
+    padding: 50px;
+    color: black;
+}
+
+section {
+    margin-bottom: 10px;
+}
+
+/***************** containers **************************/
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+}
+
+.project {
+    margin-bottom: 15px;
+}
+
+.references {
+    font-style: italic;
+}
+
+/*************** child elements ******************************/
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #7CB9E8;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+
+ul {
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+#name {
+    font-size: 2.5rem;
+    color: white;
+}
+
+#developer {
+    font-size: 1.50rem;
+    color: white;
+}
+
+.icon {
+    padding-right: 10px;
+}
+
+#date {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    margin-top: -0.50em;
+}
+
+#date p {
+    margin: 0;
+}
+
+h3 {
+    margin-bottom: 0.83em;
+}
+
+@keyframes transitionIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    #resume-container {
+        max-width: 90vw;
+    }
+    #main-resume {
+        padding: 20px;
+    }
+}
