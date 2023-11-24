@@ -15,6 +15,7 @@ const typed = new Typed('#element', {
         <h2>Skills</h2>
         <ul>
             <li>HTML, Css, JavaScript,PHP and Python</li>
+            <li>Frameworks (Vue js, Tree js, Node js)</li>
             <li>Database Management (MySQL, MongoDB)</li>
             <li>Version Control (Git, GitHub)</li>
             <li>3D Modeling</li>
