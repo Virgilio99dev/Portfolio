@@ -1,10 +1,7 @@
-const $ = document.querySelector.bind(document);
-
 if(typeof Typed !== 'undefined') {
-$('#element').innerHTML = '';
-const typed = new Typed('#element', {
-    strings: [`
-    <section>
+    const $ = document.querySelector.bind(document),
+     $text = `
+     <section>
         <p>
             Hey there!! <br>
             I am Virgilio, a highly motivated programmer with expertise in web development technologies and 3D modeling. I am eager to join the company's software development team.
@@ -20,8 +17,14 @@ const typed = new Typed('#element', {
             <li>Version Control (Git, GitHub)</li>
             <li>3D Modeling</li>
         </ul>
-    </section>`],
+    </section>
+     `;
+$('#element').innerHTML = '';
+const typed = new Typed('#element', {
+    strings: [$text],
     typeSpeed: 10,
     showCursor: false,
   });
+} else {
+    $('#element').innerHTML = $text;
 }
