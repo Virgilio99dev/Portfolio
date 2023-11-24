@@ -1,5 +1,6 @@
-setTimeout(() => {
 const $ = document.querySelector.bind(document);
+
+if(typeof Typed !== 'undefined') {
 $('#element').innerHTML = '';
 const typed = new Typed('#element', {
     strings: [`
@@ -22,4 +23,4 @@ const typed = new Typed('#element', {
     typeSpeed: 10,
     showCursor: false,
   });
-  }, 100);
+}
