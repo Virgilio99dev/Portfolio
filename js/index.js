@@ -1,8 +1,17 @@
 const $ = document.querySelector.bind(document);
 const $navlinks = document.querySelectorAll('.nav_link');
 
+function showLoader() {
+    $('.progress').classList.add('show');
+}
+
+function hideLoader() {
+    $('.progress').classList.remove('show');
+}
+
 function loadPage(page) {
     if(page == 'home.html') {
+        showLoader();
         fetch(`../html/${page}`)
         .then(res => res.text())
         .then(html => {
@@ -17,13 +26,15 @@ function loadPage(page) {
             script2.src = 'https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js';
             script3.src = '../js/home.js';
              $('main').innerHTML = '';
-             $('main').append(script, script2, script3, content);
+             $('main').append(content, script, script2, script3);
+             hideLoader();
         })
         .catch(err => {
             let $err = document.createElement('h1').textContent = err;
             $('main').appendChild($err);
         });
     } else {
+        showLoader();
         fetch(`../html/${page}`)
         .then(res => res.text())
         .then(html => {
@@ -32,6 +43,7 @@ function loadPage(page) {
             let content = doc.querySelector('html');
             $('main').innerHTML = '';
             $('main').appendChild(content);
+            hideLoader();
         })
         .catch(err => {
             let $err = document.createElement('h1').textContent = err;
@@ -61,7 +73,6 @@ document.addEventListener('click', (e) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     loadPage('home.html');
-    $('.nav_link').classList.add('active');
 });
 
 $navlinks.forEach(navlink => {

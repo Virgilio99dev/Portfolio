@@ -1,3 +1,4 @@
+setTimeout(() => {
 const $ = document.querySelector.bind(document);
 $('#element').innerHTML = '';
 const typed = new Typed('#element', {
@@ -19,4 +20,6 @@ const typed = new Typed('#element', {
         </ul>
     </section>`],
     typeSpeed: 10,
+    showCursor: false,
   });
+  }, 100);

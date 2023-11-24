@@ -9,7 +9,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
 }
 .container-projects {
@@ -18,9 +18,7 @@ main {
     place-items: center;
     grid-gap: 5rem;
     animation: transitionIn 1s ease-in-out;
-    width: 100vw;
-     padding-left: 20px;
-    padding-right: 20px;
+    width: 90vw;
 }
 
 section {
