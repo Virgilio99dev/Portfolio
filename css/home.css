@@ -34,8 +34,9 @@ body {
     width: 20vw;
 }
 
-#t_welcome {
+#text-start {
     font-size: 3rem;
+    text-align: center;
 }
 
 p {
@@ -86,7 +87,7 @@ li {
     justify-content: center;
     align-items: center;
     position: fixed;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     animation: transitionIn 1s ease-in-out;
 }
@@ -99,6 +100,10 @@ li {
         opacity: 1;
     }
     
+}
+
+#parent-name {
+    text-align: center;
 }
 
 /************* Responsive ********************/
@@ -132,9 +137,3 @@ li {
     width: 70vw;
 }
 }
-
-/* @media screen and (max-width: 600px) {
-    #introduction_text {
-        margin-top: 70vh;
-    }
-} */
