@@ -83,6 +83,7 @@ body {
         left: -100vw;
         transition: all 0.50s ease-in-out;
         height: 40vh;
+        width: 40vw;
     }
     
     #header-main-top {

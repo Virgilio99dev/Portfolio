@@ -1,5 +1,5 @@
-if(typeof Typed !== 'undefined') {
-    const $ = document.querySelector.bind(document),
+function typingEffect() {
+const $ = document.querySelector.bind(document),
      $text = `
      <section>
         <p>
@@ -19,6 +19,9 @@ if(typeof Typed !== 'undefined') {
         </ul>
     </section>
      `;
+
+if(typeof Typed !== 'undefined') {
+    
 $('#element').innerHTML = '';
 const typed = new Typed('#element', {
     strings: [$text],
@@ -28,3 +31,6 @@ const typed = new Typed('#element', {
 } else {
     $('#element').innerHTML = $text;
 }
+}
+
+typingEffect();
