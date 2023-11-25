@@ -251,18 +251,13 @@ export function styleAbout() {
         cursor: pointer;
     }
     
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1024px) {
         footer {
             padding: 5px;
         }
-        
-    }
-    
-    @media screen and (max-width: 600px) {
-        footer {
-            padding: 0;
+        p, ul {
+            max-width: 90vw;
         }
-        
     }`;
 }
 
