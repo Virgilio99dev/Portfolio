@@ -295,6 +295,7 @@ export function styleProjects() {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        cursor: pointer;
     }
     
     @keyframes transitionIn {

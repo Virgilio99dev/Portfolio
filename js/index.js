@@ -46,31 +46,37 @@ function fetchPage(page) {
 
 function loadPage(page) {
     switch(page) {
-        case '../html/home.html':
+        case '':
             fetchHome();
             styleHome();
             break;
-        case '../html/about.html':
-            fetchPage(page);
+        case '#/about':
+            fetchPage('../html/about.html');
             styleAbout();
             break;
-        case '../html/projects.html':
-            fetchPage(page);
+        case '#/projects':
+            fetchPage('../html/projects.html');
             styleProjects();
             break;
-        case '../html/resume.html':
-            fetchPage(page);
+        case '#/resume':
+            fetchPage('../html/resume.html');
             styleResume();
             break;
     }
 }
 
 /* Events */
+window.addEventListener('hashchange', (e) => {
+    loadPage(window.location.hash);
+    $navlinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === window.location.hash) {
+            link.classList.add('active');
+        }
+    });
+});
+
 document.addEventListener('click', (e) => {
-    if (e.target.matches('header a')) {
-        e.preventDefault();
-        loadPage(e.target.attributes.href.value);
-    }
     if (e.target.matches('#icon-contact img')) {
         $('footer').classList.add('active');
     }
@@ -85,14 +91,10 @@ document.addEventListener('click', (e) => {
 })
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadPage('../html/home.html');
-});
-
-$navlinks.forEach(navlink => {
-    navlink.addEventListener('click', () => {
-        $navlinks.forEach(navlink => {
-            navlink.classList.remove('active');
-        });
-        navlink.classList.add('active');
+    loadPage(window.location.hash);
+    $navlinks.forEach(link => {
+        if (link.getAttribute('href') === window.location.hash) {
+            link.classList.add('active');
+        }
     });
 });
