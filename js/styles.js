@@ -289,13 +289,20 @@ export function styleProjects() {
     section {
         width: 200px;
         height: 200px;
+        border: 3px solid orange;
+        padding: 10px;
+        background-color: white;
+        transition: all 0.50s ease-in-out;
+        cursor: pointer;
+        color: black;
+    }
+
+    section:hover {
+        scale: 1.1;
     }
     
     section img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        cursor: pointer;
     }
     
     @keyframes transitionIn {
@@ -336,7 +343,7 @@ export function styleResume() {
     #resume-container {
         display: flex;
         flex-direction: column;
-        max-width: 50vw;
+        max-width: 70vw;
         background-color: whitesmoke;
         animation: transitionIn 1s ease-in-out;
     }
