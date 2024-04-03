@@ -98,9 +98,6 @@ body {
     #header-main-top .active {
         left: 0;
     }
-    #icon-nav .active {
-        display: none;
-    }
 }
 
 /********************** loading animation *************************/

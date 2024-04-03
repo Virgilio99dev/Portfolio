@@ -115,7 +115,9 @@ export function styleHome() {
             flex-direction: column;
             height: auto;
         }
-    
+        #text-start {
+            font-size: 2rem;
+        }
         #introduction_container {
             display: flex;
             justify-content: center; /* align horizontal */
@@ -441,7 +443,7 @@ export function styleResume() {
     
     @media screen and (max-width: 900px) {
         #resume-container {
-            max-width: 90vw;
+            max-width: 100vw;
         }
         #main-resume {
             padding: 20px;

@@ -1,9 +1,17 @@
 import { styleAbout, styleHome, styleProjects, styleResume } from "./styles.js";
+import { NavBarMenu } from "https://unpkg.com/npm-package-bir@1.1.2/npm-resource.js";
 
 /* Variables */
 const $ = document.querySelector.bind(document);
 const $navlinks = document.querySelectorAll('.nav_link');
 const log = console.log;
+
+NavBarMenu("#icon-nav", () => {
+    $('.container_div_nav').classList.toggle('active');
+    window.addEventListener("hashchange", () => {
+        $('.container_div_nav').classList.remove('active');
+      });
+}, "35px", "35px", "black", "4px");
 
 function fetchHome() {
     $('main').innerHTML = '';
@@ -82,11 +90,6 @@ document.addEventListener('click', (e) => {
     }
     if (e.target.matches('#exit-icon')) {
         $('footer').classList.remove('active');
-    }
-    if (e.target.matches('#icon-nav img')) {
-      $('.container_div_nav').classList.toggle('active');
-      $('#icon-nav-x').classList.toggle('active');
-      $('#icon-nav-menu').classList.toggle('active');
     }
 })
 
