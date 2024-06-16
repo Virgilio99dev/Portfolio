@@ -1,58 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <!-- <link rel="stylesheet" href="../css/about.css"> -->
+    <title>Virgilio López - Portfolio</title>
+    <style>
+        #about-container {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            max-width: 900px;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        #about-text {
+            /* flex: 1 1 50%; */
+            padding: 20px;
+            /* background-color: blue; */
+        }
+        #about-text h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        #about-text p {
+            line-height: 1.6;
+            color: #fff;
+        }
+        #about-image {
+            flex: 1 1 50%;
+            padding: 20px;
+        }
+        #about-image img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+            border: 5px solid #ed9121;
+        }
+    </style>
 </head>
 <body id="about-body">
-    <header id="header_about">
-        <h1>Virgilio Lopez</h1>
-        <p style="border-bottom: 1px solid;">Fullstack Developer</p>
-    </header>
-
-    <section>
-        <h2>Introduction</h2>
-        <p>
-            Hello, I'm Virgilio, a passionate and highly motivated programmer with expertise in a diverse range of web development technologies. I am excited to introduce myself as a potential candidate for your company's software development team.
-        </p>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>JavaScript, PHP and Python, Node.js</li>
-            <li>Database Management (MySQL, MongoDB)</li>
-            <li>Version Control (Git, GitHub)</li>
-            <li>DevOps</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Experience</h2>
-        <p>
-            I have 2 years of experience in web development and have worked on a variety of projects, ranging from e-commerce websites to dynamic web applications. I am passionate about writing clean and maintainable code, and I take pride in staying up-to-date with the latest web development trends and best practices.
-        </p>
-    </section>
-
-    <section>
-        <h2>Additional Skills</h2>
-        <ul>
-            <li>I am a problem solver with a strong analytical mindset, capable of tackling complex challenges.</li>
-            <li>I have a keen eye for detail and am committed to delivering high-quality work.</li>
-            <li>I am a quick learner and adapt easily to new technologies and tools.</li>
-            <li>My background in 3D modeling adds a unique skill set to the team, allowing for innovative and visually engaging projects.</li>
-        </ul>
-    </section>
-
-    <div id="icon-contact"><img src="../img/contact.png" alt="icon"></div>
-
-    <footer>
-        <img id="exit-icon" src="../img/x-square-fill.svg" alt="svg">
-        <p>Contact me at <a href="mailto:birgilio99dev@gmail.com" id="contact">birgilio99dev@gmail.com</a></p>
-        <p>Thank you for considering my application. I look forward to the possibility of working together to create outstanding digital experiences.</p>
-    </footer>
-
+    <div id="about-container">
+        <div id="about-text">
+            <h1>Acerca de mí</h1>
+            <p>¡Hola! Soy Virgilio López, un desarrollador full stack y especialista en DevOps. Me apasiona la tecnología y la programación, y disfruto aprendiendo y explorando nuevas herramientas y lenguajes.</p>
+            <p>Me considero una persona proactiva y con gran capacidad de adaptación. Disfruto trabajando en equipo y compartiendo conocimientos con mis colegas. Además, me interesan la música, el cine y la lectura, lo que me ayuda a mantener un equilibrio entre mi vida personal y profesional.</p>
+            <p>Siempre estoy en busca de nuevos retos que me permitan mejorar mis habilidades y conocimientos. Me motiva superarme cada día y contribuir de manera positiva en los proyectos en los que participo.</p>
+        </div>
+        <div id="about-image">
+            <img src="https://dsm01pap003files.storage.live.com/y4m0dpiywLh64vTYFJJDH3tpsx6aJ6H1zU8mAsQq-_Pwal9rFtnKleNqclnKQvVH8n86o0zaEpG4g72e31RtMFcks39-Z9Vm9v2Yc61aRRt5eTU7RnBTvIxnBGinP-Hlq9r_2rfcoigERbsiVyydzPGAJxzaY4Hq5M7idxx4MUiquga82K3yg8O1A4PH3EKqELKTZCNBx_8Aqy1s_ZD88so3ZH2SuKrzWltGu1bD8p9xAA?encodeFailures=1&width=1533&height=2044" alt="Virgilio López">
+        </div>
+    </div>
 </body>
 </html>

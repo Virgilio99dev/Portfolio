@@ -3,8 +3,8 @@ const $ = document.querySelector.bind(document),
      $text = `
      <section>
         <p>
-            Hey there!! <br>
-            I am Virgilio, a highly motivated programmer with expertise in web development technologies and 3D modeling. I am eager to join the company's software development team.
+            ¡Hola! <br>
+            Soy Virgilio, un programador altamente motivado y con experiencia en tecnologías de desarrollo web y manejo de bases de datos. Estoy deseando unirme al equipo de desarrollo de software de la empresa.
         </p>
     </section>
 
@@ -12,10 +12,11 @@ const $ = document.querySelector.bind(document),
         <h2>Skills</h2>
         <ul>
             <li>JavaScript, Node.js, PHP and Python</li>
-            <li>Frameworks (Vue js, Tree js, Node js)</li>
-            <li>Database Management (MySQL, MongoDB)</li>
-            <li>Version Control (Git, GitHub)</li>
-            <li>DevOps</li>
+            <li>Frameworks (Vue js, Tree js, Node js, React js)</li>
+            <li>Gestión de base de datos (MySQL, MongoDB, Google Firebase)</li>
+            <li>Control de versiones (Git, GitHub)</li>
+            <li>Desarrollo de aplicaciones móviles (React Native)</li>
+            <li>DevOps (Docker, Jenkins, Kubernetes)</li>
         </ul>
     </section>
      `;

@@ -4,8 +4,124 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Resume</title>
-    <!-- <link rel="stylesheet" href="../css/resume.css"> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <style>
+      #body-resume {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #resume-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 70vw;
+        background-color: whitesmoke;
+        animation: transitionIn 1s ease-in-out;
+    }
+    
+    #header-resume {
+        text-align: center;
+        background-color: #002D62;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    
+    #main-resume {
+        padding: 50px;
+        color: black;
+    }
+    
+    section {
+        margin-bottom: 10px;
+    }
+    
+    /***************** containers **************************/
+    .contact-info {
+        margin-bottom: 20px;
+    }
+    
+    .contact-info ul {
+        list-style-type: none;
+    }
+    
+    .project {
+        margin-bottom: 15px;
+    }
+    
+    .references {
+        font-style: italic;
+    }
+    
+    /*************** child elements ******************************/
+    h1, h2 {
+        font-family: 'Times New Roman', Times, serif;
+        color: #7CB9E8;
+    }
+    
+    h2 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
+    }
+    
+    
+    ul {
+        padding: 0;
+    }
+    
+    li {
+        margin-bottom: 5px;
+    }
+    
+    #name {
+        font-size: 2.5rem;
+        color: white;
+    }
+    
+    #developer {
+        font-size: 1.50rem;
+        color: white;
+    }
+    
+    .icon {
+        padding-right: 10px;
+    }
+    
+    #date {
+        display: flex;
+        justify-content: space-between;
+        color: gray;
+        margin-top: -0.50em;
+    }
+    
+    #date p {
+        margin: 0;
+    }
+    
+    h3 {
+        margin-bottom: 0.83em;
+    }
+    
+    @keyframes transitionIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+        
+    }
+    
+    @media screen and (max-width: 900px) {
+        #resume-container {
+            max-width: 100vw;
+        }
+        #main-resume {
+            padding: 20px;
+        }
+    }
+    </style>
   </head>
   <body id="body-resume">
     <div id="resume-container">
@@ -43,119 +159,109 @@
         </section>
 
         <section class="summary">
-          <h2>Summary</h2>
+          <h2>Resumen</h2>
           <p>
-            Enthusiastic and detail-oriented programmer with expertise in web
-            development, database management, version control, and DevOps. Adept
-            at creating responsive and visually appealing websites, optimizing
-            database performance, and collaborating on projects using Git and
-            GitHub.
+            Desarrollador Fullstack con experiencia en construcción dinámica y responsiva.
+            sitios web y aplicaciones. Experto en front-end y back-end
+            desarrollo, con una sólida base en lenguajes de programación y
+            bases de datos. Apasionado por aprender e implementar nuevos
+            tecnologías para mejorar la funcionalidad del proyecto y la experiencia del usuario.
           </p>
         </section>
 
         <section class="technical-skills">
-          <h2>Technical Skills</h2>
+          <h2>Habilidades técnicas</h2>
           <ul>
-            <li>Languages: JavaScript, Node.js, Python, Php</li>
-            <li>Databases: MySQL, MongoDB</li>
-            <li>Version Control: Git</li>
-            <li>Collaboration: GitHub</li>
+            <li>Lenguages: JavaScript, Python, Php</li>
+            <li>Frontend: HTML, CSS, React, Angular</li>
+            <li>Backend: Node.js, Express</li>
+            <li>Bases de datos: MySQL, MongoDB, Firebase</li>
+            <li>Control de versiones: Git</li>
+            <li>Colaboración: GitHub</li>
             <li>DevOps: Aws, Heroku</li>
           </ul>
         </section>
 
         <section class="education">
-          <h2>Education or Training</h2>
-          <p><strong>Edutin Academy</strong> - Computer Science</p>
+          <h2>Educación o entrenamiento</h2>
+          <p><strong>Udemy</strong> - Bootcamp de desarrollo web fullstack</p>
           <div id="date">
-            <p>2022 - 2022</p>
+            <p>2021 - 2022</p>
             <p>Remote</p>
           </div>
 
-          <p>
-            <strong>Edutin Academy</strong> - digital marketing and social media
-          </p>
+          <p><strong>Udemy</strong> - Ciencias de la Computación.</p>
           <div id="date">
-            <p>2022 - 2022</p>
+            <p>2021 - 2022</p>
             <p>Remote</p>
           </div>
           <!-- Add more courses or certifications as needed -->
         </section>
 
         <section class="experience">
-          <h2>Professional Experience</h2>
+          <h2>Experiencia profesional</h2>
           <article>
-            <h3>Vilgo IT - Fullstack developer</h3>
+            <h3>Vilgo IT - Desarrollador fullstack</h3>
             <div id="date">
-              <p>September 2022 - current</p>
+              <p>Septiembre 2022 - actual</p>
               <p>Tuxtla, mx</p>
             </div>
             <ul>
               <li>
-                Developed and maintained dynamic, responsive websites using
-                HTML, CSS, and JavaScript.
+                Desarrollar y mantener aplicaciones web y móviles para clientes
+                en una variedad de industrias.
               </li>
               <li>
-                Implemented server-side functionality using Node.js, ensuring
-                seamless integration with front-end elements.
+                Colaborar con diseñadores y otros desarrolladores para crear
+                soluciones innovadoras y eficientes.
               </li>
               <li>
-                Designed and optimized MySQL databases for efficient data
-                storage and retrieval.
-              </li>
-              <li>
-                Collaborated with cross-functional teams, contributing to
-                project development and troubleshooting.
-              </li>
-              <li>
-                Utilized Git for version control, ensuring a streamlined and
-                organized development process.
-              </li>
-              <li>
-                Integrated NoSQL databases for specific project requirements,
-                improving scalability.
+                Implementar prácticas de desarrollo ágiles para garantizar la
+                entrega oportuna de productos de alta calidad.
               </li>
             </ul>
           </article>
 
           <!-- Add more experience entries as needed -->
-        </section>
-
-        <section class="projects">
-          <h2>Projects</h2>
-          <div class="project">
-            <h3>Blog technologies - 2024</h3>
-            <li>
-              Developed a blog website using the React framework to showcase
-              articles on various technologies.
-            </li>
-            <li>
-              Implemented a responsive design to ensure optimal user experience
-              across devices.
-            </li>
-            <li>
-              Utilized Node.js for server-side functionality and MongoDB for
-              database management.
-            </li>
-          </div>
-
-          <!-- Add more project entries as needed -->
+           <article>
+            <h3>Blog de tecnologías - 2024</h3>
+            <div id="date">
+              <p>Agosto 2021 - Septiembre 2022</p>
+              <p>Remote</p>
+            </div>
+            <ul>
+              <li>
+                Escribir y publicar artículos sobre tecnología y desarrollo web
+                en un blog personal.
+              </li>
+              <li>
+                Colaborar con otros escritores y editores para mejorar la
+                calidad y relevancia del contenido.
+              </li>
+              <li>
+                Promocionar el blog en redes sociales y otros canales para
+                aumentar la visibilidad y el tráfico.
+              </li>
+            </ul>
+           </article>
         </section>
 
         <section class="additional-skills">
-          <h2>Additional Skills</h2>
+          <h2>Habilidades adicionales</h2>
           <ul>
-            <li>Excellent problem-solving and analytical skills</li>
-            <li>Strong communication and collaboration abilities</li>
-            <li>
-              Attention to detail and commitment to producing high-quality work
-            </li>
+            <li>Comunicación efectiva</li>
+            <li>Resolución de problemas</li>
+            <li>Trabajo en equipo</li>
+            <li>Organización y gestión del tiempo</li>
+            <li>Capacidad de aprendizaje rápido</li>
           </ul>
         </section>
 
         <section class="references">
-          <h2>References</h2>
-          <p>Available upon request.</p>
+          <h2>Referencias</h2>
+          <p>
+            Disponible a petición.
+          </p>
         </section>
       </main>
     </div>

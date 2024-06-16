@@ -1,4 +1,3 @@
-import { styleAbout, styleHome, styleProjects, styleResume } from "./styles.js";
 import { NavBarMenu } from "https://unpkg.com/npm-package-bir@1.1.2/npm-resource.js";
 
 /* Variables */
@@ -56,19 +55,15 @@ function loadPage(page) {
     switch(page) {
         case '':
             fetchHome();
-            styleHome();
             break;
         case '#/about':
             fetchPage('../html/about.html');
-            styleAbout();
             break;
         case '#/projects':
             fetchPage('../html/projects.html');
-            styleProjects();
             break;
         case '#/resume':
             fetchPage('../html/resume.html');
-            styleResume();
             break;
     }
 }

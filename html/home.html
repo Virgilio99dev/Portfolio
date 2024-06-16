@@ -5,15 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" href="../css/home.css"> -->
+     <style>
+        body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #text_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+    }
+    
+    #introduction_container {
+        display: flex;
+        justify-content: space-between; /* align horizontal */
+        align-items: center; /* align vertical */
+        height: 90vh;
+        width: 60vw;
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+    
+    #introduction_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+    
+    #avatar {
+        height: 30vh;
+        width: 20vw;
+    }
+    
+    #text-start {
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    p {
+        font-size: 1.5rem;
+    }
+    
+    #occupation {
+        border-bottom: 1px solid #4B9CD3;
+    }
+    
+    #avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    model-viewer {
+        height: 50vh;
+        width: 50vh;
+    }
+    
+    #container_element {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+    }
+        
+    #element {
+       text-align: center;
+    }
+    
+    section {
+        margin-bottom: 20px;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    li {
+        margin-bottom: 10px;
+    }
+    
+    #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        width: 100vw;
+        animation: transitionIn 1s ease-in-out;
+    }
+    
+    @keyframes transitionIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+        
+    }
+    
+    #parent-name {
+        text-align: center;
+    }
+    
+    /************* Responsive ********************/
+    @media screen and (max-width: 900px) {
+        #container {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        #text-start {
+            font-size: 2rem;
+        }
+        #introduction_container {
+            display: flex;
+            justify-content: center; /* align horizontal */
+            align-items: center; /* align vertical */
+            flex-direction: column;
+            height: 70vh;
+            width: 70vw;
+        }
+    
+
+    #container_element {
+        width: 100%;
+    }
+    
+    #text_container {
+        width: 85vw;
+    }
+    }
+     </style>
 </head>
 <body>
     <div id="container">
         <div id="introduction_container">
         <div id="introduction_text">
-        <h1 id="text-start">Programming is an Art</h1>
+        <h1 id="text-start">La programación es un arte.</h1>
         <div id="parent-name">
             <p>Virgilio lopez</p>
-            <p id="occupation">Designer & Developer</p>
+            <p id="occupation">Desarrollador full stack & DevOps</p>
         </div>
         
         </div> <!-- introduction_text -->
