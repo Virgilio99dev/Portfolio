@@ -43,18 +43,29 @@
             border-radius: 10px;
             border: 5px solid #ed9121;
         }
+        @media screen and (max-width: 768px) {
+            #about-container {
+                flex-direction: column;
+            }
+            #about-text {
+                padding: 0;
+            }
+            #about-image {
+                padding: 0;
+            }
+        }
     </style>
 </head>
 <body id="about-body">
     <div id="about-container">
+        <div id="about-image">
+            <img src="https://onedrive.live.com/embed?resid=2C15E0BDF46E6472%211628&authkey=%21ALTt8ceUH46FQdU&width=3480&height=4640" alt="Virgilio López">
+        </div>
         <div id="about-text">
             <h1>Acerca de mí</h1>
             <p>¡Hola! Soy Virgilio López, un desarrollador full stack y especialista en DevOps. Me apasiona la tecnología y la programación, y disfruto aprendiendo y explorando nuevas herramientas y lenguajes.</p>
             <p>Me considero una persona proactiva y con gran capacidad de adaptación. Disfruto trabajando en equipo y compartiendo conocimientos con mis colegas. Además, me interesan la música, el cine y la lectura, lo que me ayuda a mantener un equilibrio entre mi vida personal y profesional.</p>
             <p>Siempre estoy en busca de nuevos retos que me permitan mejorar mis habilidades y conocimientos. Me motiva superarme cada día y contribuir de manera positiva en los proyectos en los que participo.</p>
-        </div>
-        <div id="about-image">
-            <img src="https://dsm01pap003files.storage.live.com/y4m0dpiywLh64vTYFJJDH3tpsx6aJ6H1zU8mAsQq-_Pwal9rFtnKleNqclnKQvVH8n86o0zaEpG4g72e31RtMFcks39-Z9Vm9v2Yc61aRRt5eTU7RnBTvIxnBGinP-Hlq9r_2rfcoigERbsiVyydzPGAJxzaY4Hq5M7idxx4MUiquga82K3yg8O1A4PH3EKqELKTZCNBx_8Aqy1s_ZD88so3ZH2SuKrzWltGu1bD8p9xAA?encodeFailures=1&width=1533&height=2044" alt="Virgilio López">
         </div>
     </div>
 </body>
