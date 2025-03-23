@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virgilio | Portfolio</title>
+    <link rel="shortcut icon" href="../img/name-icon.png">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling on the html and body */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #E0FFFF;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #vanta-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure the background is behind all content */
+        }
+
+        #content {
+            position: relative;
+            z-index: 1;
+            overflow-y: auto;
+            height: 100%;
+            width: 100%;
+            /* style the scroll bar */
+            scrollbar-width: thin;
+            scrollbar-color: #DE3163 #005A9C;
+        }
+
+        #header-main-top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 8%;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+
+        .container_div_nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 5%;
+            width: 60%;
+            z-index: 999;
+        }
+
+        #main-p-container {
+            height: auto;
+            width: 100%;
+        }
+
+        /***************  Child Elements  ********************/
+
+        #header-main-top a {
+            text-decoration: none;
+            color: #B0C4DE;
+            font-weight: bold;
+        }
+
+        #header-main-top a:hover {
+            color: #00BFFF;
+        }
+
+        .container_div_nav .active {
+            border-bottom: 3px solid #007791;
+        }
+
+        #icon-nav {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container_div_nav {
+                display: flex;
+                flex-direction: column;
+                background-color: #1F305E;
+                justify-content: space-around;
+                align-items: center;
+                position: relative;
+                left: -100vw;
+                transition: all 0.50s ease-in-out;
+                height: 40vh;
+                width: 40vw;
+                border-top-right-radius: 5%;
+                border-bottom-right-radius: 5%;
+            }
+
+            #header-main-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            #icon-nav {
+                display: block;
+                padding: 5px;
+            }
+            #header-main-top .active {
+                left: 0;
+            }
+            /* button language */
+            .button-traductor-container {
+                left: 5%;
+                width: 100px;
+            }
+        }
+
+        /********************** loading animation *************************/
+        .progress {
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -20px 0 0 -50px;
+            display: none;
+        }
+        .progress span{
+            transition: all 500ms ease;
+            background: #4A72DA;
+            box-shadow: 1px 2px 3px #999;
+            height: 10px;
+            width: 10px;
+            display: inline-block;
+            border-radius: 10px;
+            animation: wave 2s ease  infinite;
+        }  
+
+        .progress span:nth-child(1){  animation-delay: 0; }
+        .progress span:nth-child(2){  animation-delay: 100ms; }
+        .progress span:nth-child(3){  animation-delay: 200ms; }
+        .progress span:nth-child(4){  animation-delay: 300ms; }
+        .progress span:nth-child(5){  animation-delay: 400ms; }
+        .progress span:nth-child(6){  animation-delay: 500ms; }
+        .progress span:nth-child(7){  animation-delay: 600ms; }
+        .progress span:nth-child(8){  animation-delay: 700ms; }
+
+        @keyframes wave{
+            0%, 40%, 100% { 
+                transform: translate(0, 0);
+                background-color: #4A72DA;    
+            }
+            10% { 
+                transform: translate(0, -15px); 
+                background-color: rgb(0, 255, 38);    
+            }  
+        }
+
+        .show {
+            display: block;
+        }
+
+        /**********************  button translator  *************************/
+        button[button_translator] {
+            position: absolute;
+            top: 2%;
+            right: 2%;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .blurEffect {
+            backdrop-filter: blur(3px);
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .button-traductor-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            top: 20%;
+            right: 5%;
+            background-color: white;
+            border-radius: 5rem;
+            padding: 3px;
+        }
+        .spanish, .english {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .spanish img, .english img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #00BFFF;
+            margin: 0 12px;
+        }
+        .activeTraductor {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 5rem;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="vanta-bg"></div> <!-- Fixed container for Vanta.js -->
+    <div id="content">
+        <header id="header-main-top">
+            <div class="container_div_nav">
+                <a class="nav_link" id="home" href="">Inicio</a>
+                <a class="nav_link" id="about" href="#/about">Acerca de mi</a>
+                <a class="nav_link" id="projects" href="#/projects">Proyectos</a>
+                <a class="nav_link" id="resume" href="#/resume">Currículum</a>
+            </div>
+
+            <div class="button-traductor-container">
+                <div class="spanish">
+                    <img src="../img/uri_ifs___M_df8282ca-3feb-494b-8a25-243a50b2035f.webp" alt="mexican-flag">
+                </div>
+                <div class="english">
+                    <img src="../img/uri_ifs___M_fiOwgSga4XHoqx41RwKxFjdBXAhlp-vz5JaPus1o6ac.webp" alt="usa-flag">
+                </div>
+            </div>
+
+            <div id="icon-nav"></div>
+        </header>
+        <div class="progress">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <main id="main-p-container"></main>
+    </div>
+    <script src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Include Typed.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/i18next@latest/i18next.min.js"></script>
+
+    <script>
+        VANTA.NET({
+            el: "#vanta-bg", // Apply Vanta.js to the fixed container
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundColor: 0xb2c55
+        })
+    </script>
+    <script type="module" src="../js/index.js"></script>
+</body>
+</html>

@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virgilio López - Portfolio</title>
+    <div id="about-container">
     <style>
         #about-container {
             font-family: Arial, sans-serif;
@@ -18,11 +13,10 @@
             border-radius: 10px;
             background-color: rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
+            animation: transitionIn 1s ease;
         }
         #about-text {
-            /* flex: 1 1 50%; */
             padding: 20px;
-            /* background-color: blue; */
         }
         #about-text h1 {
             font-size: 2em;
@@ -54,19 +48,23 @@
                 padding: 0;
             }
         }
+
+        @keyframes transitionIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     </style>
-</head>
-<body id="about-body">
-    <div id="about-container">
         <div id="about-image">
-            <img src="https://onedrive.live.com/embed?resid=2C15E0BDF46E6472%211628&authkey=%21ALTt8ceUH46FQdU&width=3480&height=4640" alt="Virgilio López">
+            <img src="../img/IMG_20250227_141228.jpg" alt="Virgilio López">
         </div>
         <div id="about-text">
             <h1>Acerca de mí</h1>
-            <p>¡Hola! Soy Virgilio López, un desarrollador full stack y especialista en DevOps. Me apasiona la tecnología y la programación, y disfruto aprendiendo y explorando nuevas herramientas y lenguajes.</p>
+            <p>¡Hola! Soy Virgilio López, un desarrollador full stack. Me apasiona la tecnología y la programación, y disfruto aprendiendo y explorando nuevas herramientas y lenguajes.</p>
             <p>Me considero una persona proactiva y con gran capacidad de adaptación. Disfruto trabajando en equipo y compartiendo conocimientos con mis colegas. Además, me interesan la música, el cine y la lectura, lo que me ayuda a mantener un equilibrio entre mi vida personal y profesional.</p>
             <p>Siempre estoy en busca de nuevos retos que me permitan mejorar mis habilidades y conocimientos. Me motiva superarme cada día y contribuir de manera positiva en los proyectos en los que participo.</p>
         </div>
     </div>
-</body>
-</html>

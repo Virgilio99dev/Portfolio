@@ -1,269 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Resume</title>
-    <style>
-      #body-resume {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    
-    #resume-container {
+<div class="container">
+    <style> 
+      .container {
+        animation: transitionIn 1s ease;
         display: flex;
         flex-direction: column;
-        max-width: 70vw;
-        background-color: whitesmoke;
-        animation: transitionIn 1s ease-in-out;
-    }
-    
-    #header-resume {
-        text-align: center;
-        background-color: #002D62;
-        font-family: 'Times New Roman', Times, serif;
-    }
-    
-    #main-resume {
-        padding: 50px;
-        color: black;
-    }
-    
-    section {
-        margin-bottom: 10px;
-    }
-    
-    /***************** containers **************************/
-    .contact-info {
-        margin-bottom: 20px;
-    }
-    
-    .contact-info ul {
-        list-style-type: none;
-    }
-    
-    .project {
-        margin-bottom: 15px;
-    }
-    
-    .references {
-        font-style: italic;
-    }
-    
-    /*************** child elements ******************************/
-    h1, h2 {
-        font-family: 'Times New Roman', Times, serif;
-        color: #7CB9E8;
-    }
-    
-    h2 {
-        border-bottom: 2px solid #333;
-        padding-bottom: 5px;
-    }
-    
-    
-    ul {
-        padding: 0;
-    }
-    
-    li {
-        margin-bottom: 5px;
-    }
-    
-    #name {
-        font-size: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+      }
+
+      .imageContainer {
+        width: 40%;
+        height: auto;
+        margin-top: 30px; /* Add some space between the top of the container and the image */
+      }
+
+      .imageContainer img {
+        width: 100%;
+        height: auto;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #00416A;
         color: white;
-    }
-    
-    #developer {
-        font-size: 1.50rem;
-        color: white;
-    }
-    
-    .icon {
-        padding-right: 10px;
-    }
-    
-    #date {
-        display: flex;
-        justify-content: space-between;
-        color: gray;
-        margin-top: -0.50em;
-    }
-    
-    #date p {
-        margin: 0;
-    }
-    
-    h3 {
-        margin-bottom: 0.83em;
-    }
-    
-    @keyframes transitionIn {
-        0% {
-            opacity: 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        margin-top: 30px; /* Add some space between the image and the button */
+        margin-bottom: 30px; /* Add some space between the button and the bottom of the container */
+      }
+
+      button:hover {
+        background-color: #00a5ff;
+      }
+
+      @media screen and (max-width: 1600px) {
+        .imageContainer {
+          width: 60%;
+          height: auto;
         }
-        100% {
-            opacity: 1;
+      }
+
+      @media screen and (max-width: 1050px) {
+        .imageContainer {
+          width: 80%;
+          height: auto;
         }
         
-    }
-    
-    @media screen and (max-width: 900px) {
-        #resume-container {
-            max-width: 100vw;
+      }
+
+      @media screen and (max-width: 768px) {
+        .imageContainer {
+          width: 90%;
+          height: auto;
         }
-        #main-resume {
-            padding: 20px;
+      }
+
+      @keyframes transitionIn {
+        0% {
+          opacity: 0;
         }
-    }
+        100% {
+          opacity: 1;
+        }
+      }
     </style>
-  </head>
-  <body id="body-resume">
-    <div id="resume-container">
-      <header id="header-resume">
-        <h1 id="name">Virgilio Lopez</h1>
-        <p id="developer">Fullstack developer</p>
-      </header>
-      <main id="main-resume">
-        <section class="contact-info">
-          <ul>
-            <li>
-              <img
-                class="icon"
-                src="../img/envelope.svg"
-                alt="svg"
-              />Abrahamofez@gmail.com
-            </li>
-            <li>
-              <img class="icon" src="../img/phone.svg" alt="svg" />+52
-              967-320-66-71
-            </li>
-            <li>
-              <img class="icon" src="../img/linkedin.svg" alt="svg" />
-              <a href="https://www.linkedin.com/in/birgilio-dev-55348827b/"
-                >https://www.linkedin.com/in/birgilio-dev-55348827b/</a
-              >
-            </li>
-            <li>
-              <img class="icon" src="../img/github.svg" alt="svg" />
-              <a href="https://github.com/Virgilio99dev/Portfolio"
-                >https://github.com/Virgilio99dev/Portfolio</a
-              >
-            </li>
-          </ul>
-        </section>
-
-        <section class="summary">
-          <h2>Resumen</h2>
-          <p>
-            Desarrollador Fullstack con experiencia en construcción dinámica y responsiva.
-            sitios web y aplicaciones. Experto en front-end y back-end
-            desarrollo, con una sólida base en lenguajes de programación y
-            bases de datos. Apasionado por aprender e implementar nuevos
-            tecnologías para mejorar la funcionalidad del proyecto y la experiencia del usuario.
-          </p>
-        </section>
-
-        <section class="technical-skills">
-          <h2>Habilidades técnicas</h2>
-          <ul>
-            <li>Lenguages: JavaScript, Python, Php</li>
-            <li>Frontend: HTML, CSS, React, Angular</li>
-            <li>Backend: Node.js, Express</li>
-            <li>Bases de datos: MySQL, MongoDB, Firebase</li>
-            <li>Control de versiones: Git</li>
-            <li>Colaboración: GitHub</li>
-            <li>DevOps: Aws, Heroku</li>
-          </ul>
-        </section>
-
-        <section class="education">
-          <h2>Educación o entrenamiento</h2>
-          <p><strong>Udemy</strong> - Bootcamp de desarrollo web fullstack</p>
-          <div id="date">
-            <p>2021 - 2022</p>
-            <p>Remote</p>
-          </div>
-
-          <p><strong>Udemy</strong> - Ciencias de la Computación.</p>
-          <div id="date">
-            <p>2021 - 2022</p>
-            <p>Remote</p>
-          </div>
-          <!-- Add more courses or certifications as needed -->
-        </section>
-
-        <section class="experience">
-          <h2>Experiencia profesional</h2>
-          <article>
-            <h3>Vilgo IT - Desarrollador fullstack</h3>
-            <div id="date">
-              <p>Septiembre 2022 - actual</p>
-              <p>Tuxtla, mx</p>
-            </div>
-            <ul>
-              <li>
-                Desarrollar y mantener aplicaciones web y móviles para clientes
-                en una variedad de industrias.
-              </li>
-              <li>
-                Colaborar con diseñadores y otros desarrolladores para crear
-                soluciones innovadoras y eficientes.
-              </li>
-              <li>
-                Implementar prácticas de desarrollo ágiles para garantizar la
-                entrega oportuna de productos de alta calidad.
-              </li>
-            </ul>
-          </article>
-
-          <!-- Add more experience entries as needed -->
-           <article>
-            <h3>Blog de tecnologías - 2024</h3>
-            <div id="date">
-              <p>Agosto 2021 - Septiembre 2022</p>
-              <p>Remote</p>
-            </div>
-            <ul>
-              <li>
-                Escribir y publicar artículos sobre tecnología y desarrollo web
-                en un blog personal.
-              </li>
-              <li>
-                Colaborar con otros escritores y editores para mejorar la
-                calidad y relevancia del contenido.
-              </li>
-              <li>
-                Promocionar el blog en redes sociales y otros canales para
-                aumentar la visibilidad y el tráfico.
-              </li>
-            </ul>
-           </article>
-        </section>
-
-        <section class="additional-skills">
-          <h2>Habilidades adicionales</h2>
-          <ul>
-            <li>Comunicación efectiva</li>
-            <li>Resolución de problemas</li>
-            <li>Trabajo en equipo</li>
-            <li>Organización y gestión del tiempo</li>
-            <li>Capacidad de aprendizaje rápido</li>
-          </ul>
-        </section>
-
-        <section class="references">
-          <h2>Referencias</h2>
-          <p>
-            Disponible a petición.
-          </p>
-        </section>
-      </main>
-    </div>
-  </body>
-</html>
+      <div class="imageContainer">
+        <img src="../img/Blue and White Professional CV Resume.jpg" id="resume-img" alt="cv">
+      </div>
+      <button type="button" id="download-button">Download</button>
+</div>
