@@ -24,11 +24,15 @@ const SCRIPTS = {
   projects: './projects.js'
 };
 
+// Determine the base URL based on the environment
+const isProduction = window.location.hostname !== '127.0.0.1';
+const baseURL = isProduction ? '/Portfolio' : '';
+
 const PAGES = {
-  home: '../html/home.html',
-  about: '../html/about.html',
-  projects: '../html/projects.html',
-  resume: '../html/resume.html'
+  home: `${baseURL}/html/home.html`,
+  about: `${baseURL}/html/about.html`,
+  projects: `${baseURL}/html/projects.html`,
+  resume: `${baseURL}/html/resume.html`
 };
 
 /* Utility Functions */
