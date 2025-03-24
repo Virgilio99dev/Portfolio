@@ -18,10 +18,10 @@ const SELECTORS = {
 };
 
 const SCRIPTS = {
-  home: '../js/home.js',
-  resume: '../js/resume.js',
-  aboutMe: '../js/aboutMe.js',
-  projects: '../js/projects.js'
+  home: './home.js',
+  resume: './resume.js',
+  aboutMe: './aboutMe.js',
+  projects: './projects.js'
 };
 
 const PAGES = {
