@@ -18,21 +18,17 @@ const SELECTORS = {
 };
 
 const SCRIPTS = {
-  home: './home.js',
-  resume: './resume.js',
-  aboutMe: './aboutMe.js',
-  projects: './projects.js'
+  home: '../js/home.js',
+  resume: '../js/resume.js',
+  aboutMe: '../js/aboutMe.js',
+  projects: '../js/projects.js'
 };
 
-// Determine the base URL based on the environment
-const isProduction = window.location.hostname !== '127.0.0.1';
-const baseURL = isProduction ? '/Portfolio' : '';
-
 const PAGES = {
-  home: `${baseURL}/html/home.html`,
-  about: `${baseURL}/html/about.html`,
-  projects: `${baseURL}/html/projects.html`,
-  resume: `${baseURL}/html/resume.html`
+  home: '../docs/home.html',
+  about: '../docs/about.html',
+  projects: '../docs/projects.html',
+  resume: '../docs/resume.html'
 };
 
 /* Utility Functions */
