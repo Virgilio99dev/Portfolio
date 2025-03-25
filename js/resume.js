@@ -5,8 +5,8 @@ const OpenPDF = (url) => {
 };
 
 button.addEventListener("click", () => {
-  const pdfUrl = "../Assets/Blue and White Professional CV Resume.pdf"; // Replace with your PDF URL
-  const pdfSpanishUrl = "../Assets/Blue and White Professional CV Resume version español.pdf";
+  const pdfUrl = "/Portfolio/Assets/Blue and White Professional CV Resume.pdf"; // Replace with your PDF URL
+  const pdfSpanishUrl = "/Portfolio/Assets/Blue and White Professional CV Resume version español.pdf";
   const currentLanguage = i18next.language;
   OpenPDF(currentLanguage === 'es' ? pdfSpanishUrl : pdfUrl);
 });

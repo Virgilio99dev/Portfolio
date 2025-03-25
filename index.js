@@ -18,10 +18,10 @@ const SELECTORS = {
 };
 
 const SCRIPTS = {
-  home: '/js/home.js',
-  resume: '/js/resume.js',
-  aboutMe: '/js/aboutMe.js',
-  projects: '/js/projects.js'
+  home: '/Portfolio/js/home.js',
+  resume: '/Portfolio/js/resume.js',
+  aboutMe: '/Portfolio/js/aboutMe.js',
+  projects: '/Portfolio/js/projects.js'
 };
 
 const PAGES = {
@@ -94,7 +94,7 @@ i18next.init({
               project2Description: "Minerva is a platform that helps organize tasks and thoughts, create appointments and dashboards to track progress and stay motivated.",
               preview: "Preview",
             // Resume page translations
-             imgSrc: "../img/Blue and White Professional CV Resume.jpg",
+             imgSrc: "/Portfolio/img/Blue and White Professional CV Resume.jpg",
              downloadButton: "Download"
         }
     },
@@ -145,7 +145,7 @@ i18next.init({
             project2Description: "Minerva es una plataforma que ayuda a organizar tareas y pensamientos, crear citas y paneles para realizar un seguimiento del progreso y mantenerse motivado.",
             preview: "Vista previa",
           // Resume page translations
-          imgSrc: "../img/Blue and White Professional CV Resume.png",
+          imgSrc: "/Portfolio/img/Blue and White Professional CV Resume.png",
           downloadButton: "Descargar"
         }
     }
