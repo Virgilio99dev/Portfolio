@@ -18,17 +18,17 @@ const SELECTORS = {
 };
 
 const SCRIPTS = {
-  home: '../js/home.js',
-  resume: '../js/resume.js',
-  aboutMe: '../js/aboutMe.js',
-  projects: '../js/projects.js'
+  home: '/js/home.js',
+  resume: '/js/resume.js',
+  aboutMe: '/js/aboutMe.js',
+  projects: '/js/projects.js'
 };
 
 const PAGES = {
-  home: '../docs/home.html',
-  about: '../docs/about.html',
-  projects: '../docs/projects.html',
-  resume: '../docs/resume.html'
+  home: 'docs/home.html',
+  about: 'docs/about.html',
+  projects: 'docs/projects.html',
+  resume: 'docs/resume.html'
 };
 
 /* Utility Functions */
