@@ -6,6 +6,11 @@ const SELECTORS = {
     occupation: '#occupation'
 };
 
+// function handleModelError(modelViewer) {
+//     console.error('Failed to load 3D model:', modelViewer.src);
+//     modelViewer.innerHTML = '<p>3D model failed to load. Please try again later.</p>';
+//   }
+
 function typingEffect() {
     const $ = document.querySelector.bind(document);
 
@@ -39,6 +44,24 @@ function typingEffect() {
 export function initHome() {
     // Run the initial typing effect
     typingEffect();
+
+    // Dynamically add the <model-viewer> element
+    const avatarContainer = document.getElementById('avatar');
+
+    // Create the <model-viewer> element
+    const modelViewer = document.createElement('model-viewer');
+    modelViewer.setAttribute('disable-zoom', '');
+    modelViewer.setAttribute('disable-tap', '');
+    modelViewer.setAttribute('camera-controls', '');
+    modelViewer.setAttribute('touch-action', 'pan-y');
+    modelViewer.setAttribute('auto-rotate', '');
+    modelViewer.setAttribute('scale', '0.2 0.2 0.2');
+    modelViewer.setAttribute('shadow-intensity', '1');
+    modelViewer.setAttribute('src', '/Portfolio/models/python.glb');
+    modelViewer.setAttribute('alt', 'An animated 3D model of python');
+
+    // Add the <model-viewer> to the container
+    avatarContainer.appendChild(modelViewer);
 
     // Save a reference to the listener (here it's just typingEffect)
     const languageChangeListener = typingEffect;
