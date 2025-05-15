@@ -6,6 +6,8 @@ function initLanguage() {
     document.getElementById('project1-description').textContent = i18next.t('project1Description');
     document.getElementById('project2-title').textContent = i18next.t('project2Title');
     document.getElementById('project2-description').textContent = i18next.t('project2Description');
+    document.getElementById('project3-title').textContent = i18next.t('project3Title');
+    document.getElementById('project3-description').textContent = i18next.t('project3Description');
     document.querySelectorAll('.preview p').forEach(el => {
         el.textContent = i18next.t('preview');
     });

@@ -90,8 +90,10 @@ i18next.init({
               projectsIntro: "Here you will find some of the projects I have worked on. If you want more information about any of them, feel free to visit the corresponding website.",
               project1Title: "Blog - Technology Dissemination",
               project1Description: "This is a blog where I share my knowledge and experiences in the world of technology. Here you will find articles on various topics, from programming to cybersecurity.",
-              project2Title: "Minerva - Task Manager",
-              project2Description: "Minerva is a platform that helps organize tasks and thoughts, create appointments and dashboards to track progress and stay motivated.",
+              project2Title: "SympNote – Medication and Health Tracking Web App",
+              project2Description: "SympNote is a personal health management web app that allows users to schedule and track medications, receive smart reminders, and journal symptoms. Built with React, Firebase, and Express, it features user authentication, push notifications, and a clean, responsive UI for daily and weekly medication routines.",
+              project3Title: "ReflectEase – Guided Journaling Web App",
+              project3Description: "ReflectEase is a modern web application for structured, self-reflective journaling. Built with React and Firebase, it allows users to track their mental, emotional, and physical well-being through daily guided questions. Users can securely log entries, view summaries, track their journaling history, and personalize their experience through a smooth and scalable interface.",
               preview: "Preview",
             // Resume page translations
              imgSrc: "/Portfolio/img/Blue and White Professional CV Resume.jpg",
@@ -141,8 +143,10 @@ i18next.init({
             projectsIntro: "Aquí encontrarás algunos de los proyectos en los que he trabajado. Si deseas obtener más información sobre alguno de ellos, no dudes en visitar la página web correspondiente.",
             project1Title: "Blog - Divulgación de tecnología",
             project1Description: "Este es un blog donde comparto mis conocimientos y experiencias en el mundo de la tecnología. Aquí encontrarás artículos sobre diversos temas, desde programación hasta seguridad informática.",
-            project2Title: "Minerva - Administrador de tareas",
-            project2Description: "Minerva es una plataforma que ayuda a organizar tareas y pensamientos, crear citas y paneles para realizar un seguimiento del progreso y mantenerse motivado.",
+            project2Title: "SympNote – Aplicación web para el seguimiento de medicamentos y salud",
+            project2Description: `SympNote es una aplicación web de gestión personal de salud que permite a los usuarios programar y registrar medicamentos, recibir recordatorios inteligentes y llevar un diario de síntomas. Desarrollada con React, Firebase y Express, incluye autenticación de usuarios, notificaciones push y una interfaz limpia y responsiva para rutinas diarias y semanales.`,
+            project3Title: "ReflectEase – Aplicación web de diario guiado",
+            project3Description: `ReflectEase es una aplicación web moderna para llevar un diario estructurado de reflexión personal. Desarrollada con React y Firebase, permite a los usuarios registrar su bienestar mental, emocional y físico mediante preguntas guiadas diarias. Las entradas se guardan de forma segura, se pueden revisar en resúmenes, consultar en el historial y personalizar fácilmente gracias a una interfaz fluida y escalable.`,
             preview: "Vista previa",
           // Resume page translations
           imgSrc: "/Portfolio/img/Blue and White Professional CV Resume.png",
@@ -236,7 +240,7 @@ function loadPage(page) {
           .catch(err => console.error("Failed to load home module:", err));
       });
       break;
-    case '#/about':
+    case '#about':
       fetchContent(PAGES.about).then(() => {
         import(SCRIPTS.aboutMe)
           .then(module => {
@@ -247,7 +251,7 @@ function loadPage(page) {
           .catch(err => console.error("Failed to load aboutMe module:", err));
       });
       break;
-    case '#/projects':
+    case '#projects':
       fetchContent(PAGES.projects).then(() => {
         import(SCRIPTS.projects)
           .then(module => {
@@ -258,7 +262,7 @@ function loadPage(page) {
           .catch(err => console.error("Failed to load projects module:", err));
       });
       break;
-    case '#/resume':
+    case '#resume':
       fetchContent(PAGES.resume).then(() => {
         import(SCRIPTS.resume)
           .then(module => {
